@@ -9,6 +9,10 @@ h2 {
   color: #66ff66;
   text-align: center;
 }
+mark {
+    background-color: black;
+    color: red;
+}
 label {
   color: #66ff66;
   font-weight: bold;
