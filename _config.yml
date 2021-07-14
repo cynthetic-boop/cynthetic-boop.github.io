@@ -1,0 +1,7 @@
+name: Good Website
+
+collections_dir: collections
+
+excerpt_separator: <!--more-->
+
+collections:
