@@ -1,0 +1,29 @@
+<script>
+    $('.contact1-form').on('submit',function(e){
+        //optional validation code here
+
+        e.preventDefault();
+
+        $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbwnYnqhnWGsb096c-xSL3oX3B50NODAMWph494K6BE0IJCM2cRXSla6dg7PQNAnrcX4Ng/exec",
+            method: "POST",
+            dataType: "json",
+            data: $(".contact1-form").serialize(),
+            success: function(response) {
+
+                if(response.result == "success") {
+                    $('.contact1-form')[0].reset();
+                    alert('Thank you for contacting us.');
+                    return true;
+                }
+                else {
+                    alert("Something went wrong. Please try again.")
+                }
+            },
+            error: function() {
+
+                alert("Something went wrong. Please try again.")
+            }
+        })
+    });
+</script
